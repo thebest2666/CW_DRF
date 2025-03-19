@@ -34,6 +34,6 @@ class PublishedHabitListAPIView(generics.ListAPIView):
     Контроллер для вывода списка публичных привычек
     """
     serializer_class = HabitSerializer
-    queryset = Habit.objects.filter(is_published=True)
+    queryset = Habit.objects.filter(is_public=True)
     permission_classes = [IsAuthenticated]
     pagination_class = HabitsPagination

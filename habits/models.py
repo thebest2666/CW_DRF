@@ -30,8 +30,7 @@ class Habit(models.Model):
         null=True,
         blank=True
     )
-    period = models.CharField(
-        max_length=4,
+    period = models.IntegerField(
         choices=PERIODS,
         verbose_name='Периодичность',
         null=True,
